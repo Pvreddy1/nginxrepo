@@ -1,6 +1,5 @@
-FROM nginx:latest
+FROM docker:24.0.5-cli
  
-# Copy custom entrypoint if needed
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
  
