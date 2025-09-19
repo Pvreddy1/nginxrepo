@@ -12,4 +12,4 @@ jobs:
         uses: actions/checkout@v3
  
       - name: Run Custom NGINX Action
-        uses: ./  # This uses the action.yml in the repo root
+        uses: ./my-nginx-action  # This uses the action.yml in the repo root
