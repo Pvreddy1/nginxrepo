@@ -1,0 +1,6 @@
+name: "Custom NGINX Action"
+description: "Run NGINX inside a GitHub Action"
+author: "Your Name"
+runs:
+  using: "docker"
+  image: "Dockerfile"
