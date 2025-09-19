@@ -1,15 +1,17 @@
-name: Test NGINX Action
+name: Test Docker Build Action
  
 on:
-  push:
-    branches: [ "main" ]
+  workflow_dispatch:
  
 jobs:
-  run-nginx:
+  docker-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
  
-      - name: Run Custom NGINX Action
-        uses: ./  # This uses the action.yml in the repo root
+      - name: Run Docker Build Action
+        uses: ./my-docker-build-action
+        with:
+          image_name: my-custom-nginx
+          context: .
