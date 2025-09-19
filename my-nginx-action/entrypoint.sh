@@ -1,7 +1,6 @@
 #!/bin/sh
 set -e
  
-echo " Starting NGINX inside GitHub Action..."
- 
-# Run nginx in foreground
-nginx -g "daemon off;"
+echo " Building Docker image..."
+
+docker build -t "${INPUT_IMAGE_NAME}" "${INPUT_CONTEXT}"
