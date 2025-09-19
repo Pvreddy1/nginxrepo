@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v3
  
       - name: Run Docker Build Action
-        uses: ./my-docker-build-action
+        uses: ./
         with:
           image_name: my-custom-nginx
           context: .
